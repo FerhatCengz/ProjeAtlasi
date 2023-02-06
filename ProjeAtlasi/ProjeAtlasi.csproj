@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Admin\AdminIndexController.cs" />
     <Compile Include="Controllers\Admin\AdminLoginController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
@@ -240,6 +241,7 @@
     <Content Include="Content\Dropzone\min\dropzone-amd-module.min.js" />
     <Content Include="Content\Dropzone\min\dropzone.min.css" />
     <Content Include="Content\Dropzone\min\dropzone.min.js" />
+    <Content Include="Content\assets\css\login.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\assets\js\main.js" />
@@ -254,15 +256,17 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\vue\components\contact.js" />
-    <Content Include="Scripts\vue\components\features.js" />
-    <Content Include="Scripts\vue\components\footer.js" />
-    <Content Include="Scripts\vue\components\headerHero.js" />
-    <Content Include="Scripts\vue\components\layout.js" />
-    <Content Include="Scripts\vue\components\loading.js" />
-    <Content Include="Scripts\vue\components\service.js" />
-    <Content Include="Scripts\vue\components\team.js" />
-    <Content Include="Scripts\vue\components\whoUs.js" />
+    <Content Include="Scripts\vue\components\admin\login.js" />
+    <Content Include="Scripts\vue\components\pageVisit\contact.js" />
+    <Content Include="Scripts\vue\components\pageVisit\features.js" />
+    <Content Include="Scripts\vue\components\pageVisit\footer.js" />
+    <Content Include="Scripts\vue\components\pageVisit\headerHero.js" />
+    <Content Include="Scripts\vue\components\pageVisit\layout.js" />
+    <Content Include="Scripts\vue\components\pageVisit\loading.js" />
+    <Content Include="Scripts\vue\components\pageVisit\service.js" />
+    <Content Include="Scripts\vue\components\pageVisit\team.js" />
+    <Content Include="Scripts\vue\components\pageVisit\whoUs.js" />
+    <Content Include="Scripts\vue\vueAdmin.js" />
     <Content Include="Scripts\vue\vueIndex.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -278,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AdminLogin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
@@ -322,7 +325,9 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\Index\Index.cshtml" />
-    <Content Include="Views\Shared\_AdminLogin.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\AdminIndex\AdminIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

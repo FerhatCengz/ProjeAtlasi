@@ -256,6 +256,10 @@ export const ContactComponent = {
             allowEmpty: false,
             message: "Lütfen Sizin İle İletişime Geçeceğimiz Bir Telefon Numarası Giriniz",
           },
+          length: {
+            minimum: 11,
+            message: "Lütfen Geçerli Bir Telefon Numarası Giriniz",
+          },
           format: {
             pattern: /^\d+$/,
             message: "Geçerli bir telefon numarası girin (örn: 05551234567)",

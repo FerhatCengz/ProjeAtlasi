@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ProjeAtlasi.Controllers
 {
+    [AllowAnonymous]
     public class IndexController : Controller
     {
         // GET: Index

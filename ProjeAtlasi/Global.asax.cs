@@ -12,6 +12,9 @@ namespace ProjeAtlasi
     {
         protected void Application_Start()
         {
+            //Global türünde yetkilendirme
+            GlobalFilters.Filters.Add(new AuthorizeAttribute());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

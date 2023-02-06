@@ -1,0 +1,81 @@
+﻿@model List<ProjeAtlasi.Models.Contacts>
+@{
+    ViewBag.Title = "AdminIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+
+}
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{modalObject.fullName}} [ {{modalObject.emailAddress}} ]</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{modalObject.message}}
+            </div>
+            <div class="modal-footer">
+
+
+                <a :href="modalObject.fileURL" target="_blank" class="btn btn-primary">{{modalObject.fileURL.length > 0 ? 'Dosyaya Git' : ''}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<table class="text-center table table-bordered" style="width:100%;" id="datatable">
+    <thead class="table-dark">
+        <tr>
+            <th>ADI</th>
+            <th>Email Adresi</th>
+            <th>Başlık</th>
+            <th>Messaj</th>
+            <th>Dosya</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contactItem in Model)
+        {
+            <tr>
+                <td>@contactItem.FullName</td>
+                <td>@contactItem.EmailAddress</td>
+                <td>@contactItem.Subject</td>
+                <td>
+                    <!--Modal Pencerine veri aktarmak-->
+                    <a type="button" data-toggle="modal" href="#exampleModal" @@click="messageModalShow($event , `@contactItem.Message` , `@contactItem.FullName` , `@contactItem.EmailAddress` , `@contactItem.FileURL` )" class="text-info">Büyük Pencerede Açmak İçin Tıklayınız</a>
+
+                    <textarea disabled class="form-control">@contactItem.Message</textarea>
+                </td>
+                <td>
+                    @if (!String.IsNullOrEmpty(contactItem.FileURL))
+                    {
+                        <a class="text-info" target="_blank" href="@contactItem.FileURL">Dosyı Görüntüle</a>
+                    }
+                    else
+                    {
+                        <p class="text-danger">Dosya Bulunmuyor !</p>
+                    }
+                </td>
+                <td>
+                    <!--Silme Buttonu -->
+                    <button class="btn btn-danger mt-md-3" @@click="deletedContact($event,`@contactItem.ContactID`)"> Sil </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+
+

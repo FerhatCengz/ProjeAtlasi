@@ -20,4 +20,11 @@ export const HeaderHero = {
     </div>
   </div>
 </section>`,
+
+  mounted() {
+    const glightbox = GLightbox({
+      selector: ".glightbox",
+    });
+
+  },
 };

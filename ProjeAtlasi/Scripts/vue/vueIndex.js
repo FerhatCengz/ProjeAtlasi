@@ -1,15 +1,14 @@
 //Vue.js cdn'sinin ve diğer componentlerin import edilmesi
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
-import { LayoutComponent } from "./components/layout.js";
-import { HeaderHero } from "./components/headerHero.js";
-import { ServiceComponent } from "./components/service.js";
-import { TeamComponent } from "./components/team.js";
-import { ContactComponent } from "./components/contact.js?v1.3";
-import { FooterComponent } from "./components/footer.js";
-import { WhoUsComponent } from "./components/whoUs.js";
-import { FeaturesComponent } from "./components/features.js";
-import { LoadingPageComponent } from "./components/loading.js";
-
+import { LayoutComponent } from "./components/pageVisit/layout.js";
+import { HeaderHero } from "./components/pageVisit/headerHero.js?v1.0";
+import { ServiceComponent } from "./components/pageVisit/service.js";
+import { TeamComponent } from "./components/pageVisit/team.js";
+import { ContactComponent } from "./components/pageVisit/contact.js?v1.3";
+import { FooterComponent } from "./components/pageVisit/footer.js";
+import { WhoUsComponent } from "./components/pageVisit/whoUs.js";
+import { FeaturesComponent } from "./components/pageVisit/features.js";
+import { LoadingPageComponent } from "./components/pageVisit/loading.js";
 
 //Vue instance
 const app = createApp({
