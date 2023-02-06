@@ -103,6 +103,7 @@ export const ContactComponent = {
           </div>
           <div class="form-group mt-3">
             <textarea v-model="fromObject.Message" class="form-control" name="message" rows="5" placeholder="Açıklama"></textarea>
+            <p :class='fromObject.Message.length >= 1500 ? "text-danger" : "" '>{{fromObject.Message.length}} / 1500</p>
           </div>
 
           <input type='hidden' v-model="fromObject.bot">
@@ -241,6 +242,7 @@ export const ContactComponent = {
             message: "Geçerli bir email adresi olmalıdır",
           },
         },
+        
         Subject: {
           presence: {
             allowEmpty: false,
@@ -248,7 +250,8 @@ export const ContactComponent = {
           },
           length: {
             minimum: 3,
-            message: "Lütfen Bizim Daha İyi Anlayacağımız Bir Başlık Giriniz",
+            maximum:20,
+            message: "Başlık Kısmınız En Az 3 Karakter En Fazla 20 Karakter Olacak Şekilde Sade Ve Öz Olamalı",
           },
         },
         PhoneNumber: {
@@ -272,9 +275,8 @@ export const ContactComponent = {
           },
           length: {
             minimum: 50,
-            message: "Daha Ayrıntılı Bir Mesaj Gönderin",
+            message: "Mesaj Kısmınız En Az 50 Karakter En Fazla 1500 Karakter Olacak Şekilde Kapsamlı Bir Özet Olmalı",
             maximum: 1500,
-            tooLong: "Lütfen Karakter Sayınızı Biraz Daha Az Tutun (Maximum 1500)",
           },
         },
       };
@@ -287,6 +289,7 @@ export const ContactComponent = {
     },
   },
   mounted() {
+    
     Dropzone.autoDiscover = false;
 
     //Dropzonu başlat

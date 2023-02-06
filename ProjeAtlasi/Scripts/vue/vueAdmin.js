@@ -22,16 +22,18 @@ const adminIndexApp = createApp({
         fullName: "",
         emailAddress: "",
         message: "",
+        phoneNumber: "",
         fileURL: "",
       },
     };
   },
   methods: {
     // "Büyük Pencerede Açmak İçin Tıklayınız" ' a tıklandığında .
-    messageModalShow(event, messageText, fullName, emailAddress, fileURL) {
+    messageModalShow(event, messageText, fullName, emailAddress, fileURL , phoneNumber) {
       this.modalObject.fullName = fullName;
       this.modalObject.emailAddress = emailAddress;
       this.modalObject.message = messageText;
+      this.modalObject.phoneNumber = phoneNumber;
       this.modalObject.fileURL = fileURL;
     },
 

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using ProjeAtlasi.Models;
+using ProjeAtlasi.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -28,6 +28,7 @@ namespace ProjeAtlasi.Controllers.Admin
             using (ProjeAtlasEntities db = new ProjeAtlasEntities())
             {
                 var getAdmin = await db.Admins.FirstOrDefaultAsync(x => x.AdminEmail == admin.AdminEmail && x.AdminPassword == admin.AdminPassword);
+                
                 if (getAdmin != null)
                 {
                     FormsAuthentication.SetAuthCookie(admin.AdminEmail, true);

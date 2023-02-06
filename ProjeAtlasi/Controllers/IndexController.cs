@@ -1,4 +1,4 @@
-﻿using ProjeAtlasi.Models;
+﻿using ProjeAtlasi.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +24,7 @@ namespace ProjeAtlasi.Controllers
         {
             using (ProjeAtlasEntities db = new ProjeAtlasEntities())
             {
+                contacts.ContactDate = DateTime.Now.ToString();
                 db.Contacts.Add(contacts);
                 db.SaveChanges();
                 return Json(new { success = true });
