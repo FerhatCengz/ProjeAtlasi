@@ -1,6 +1,6 @@
 [ADMİN SAYFASINA GİT : KULLANICI ADI : admin   Parola : admin ](http://trial.ferhatcengiz.com/AdminLogin/Login)
 
-[ANASAYFAYA GİT](http://trial.ferhatcengiz.com)
+[ANASAYFAYA GİT](http://trial.ferhatcengiz.com/AdminLogin/Login)
 
 >ETKİNLİK SİTESİ HAKKINDA 
 >
@@ -13,3 +13,11 @@ Proje, **ASP .NET MVC 5** teknolojisi kullanılarak tasarlandı ve veri depolama
 Proje, öğrencilerin hayal güçlerini kullanmalarına ve hayallerini ve fikirlerini hayata geçirmelerine yardımcı olacak bir platform olarak tasarlandı. Proje, öğrencilerin kendilerine olan güvenlerini artırmak ve hayallerini gerçekleştirmelerine olanak tanımak için tasarlandı ve geliştirildi.
 
 "Proje Atlası", öğrencilerin hayallerini ve fikirlerini hayata geçirmelerine yardımcı olacak, kullanıcı dostu, güvenli ve etkileyici bir platformdur.
+
+
+**Kaynak Kod Haritası**
+
+ 1. [(CONTROLLER) Kodlarını Görmek İçin Tıklayınız](https://github.com/FerhatCengz/ProjeAtlasi/tree/master/ProjeAtlasi/Controllers)
+2. [(VİEW)  Kodlarını Görmek İçin Tıklayınız](https://github.com/FerhatCengz/ProjeAtlasi/tree/master/ProjeAtlasi/Views)
+3. [(MODEL) Kodlarını Görmek İçin Tıklayınız](https://github.com/FerhatCengz/ProjeAtlasi/tree/master/ProjeAtlasi/Models)
+4. [VUE Kodlarını Görmek İçin Tıklayınız](https://github.com/FerhatCengz/ProjeAtlasi/tree/master/ProjeAtlasi/Scripts)
