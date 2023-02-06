@@ -1,6 +1,6 @@
 [ADMİN SAYFASINA GİT : KULLANICI ADI : admin   Parola : admin ](http://trial.ferhatcengiz.com/AdminLogin/Login)
 
-[ANASAYFAYA GİT](http://trial.ferhatcengiz.com/AdminLogin/Login)
+[ANASAYFAYA GİT](http://trial.ferhatcengiz.com)
 
 >ETKİNLİK SİTESİ HAKKINDA 
 >
