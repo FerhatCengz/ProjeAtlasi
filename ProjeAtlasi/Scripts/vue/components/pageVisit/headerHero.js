@@ -8,7 +8,7 @@ export const HeaderHero = {
         <blockquote data-aos="fade-up" data-aos-delay="100">
           <p>Her proje, bir fikrin ve bir hayalin başlangıcıdır. Biz buradayız, sizin fikirlerinizi ve hayallerinizi
             değerlendirmek ve onlara hayat vermek için. Sizinle güzel şeyler yapmak istiyoruz. Bize güvenin ve
-            hayallerinizi bizimle paylaşın. PROJE ATLASIN'a hoş geldiniz. </p>
+            hayallerinizi bizimle paylaşın.</p>
         </blockquote>
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
           <a href="#why-us" class="btn-get-started">Hadi Başlayalım</a>

@@ -38,7 +38,7 @@ export const LayoutComponent = {
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="index.html#">Anasayfa</a></li>
+        <li><a href="#">Anasayfa</a></li>
         <li><a href="#why-us">Neden Bizimle Olmalısın</a></li>
         <li><a href="#services-list">Hizmetlerimiz</a></li>
         <li><a href="#features">Güçümüz</a></li>
