@@ -242,7 +242,7 @@ export const ContactComponent = {
             message: "Geçerli bir email adresi olmalıdır",
           },
         },
-        
+
         Subject: {
           presence: {
             allowEmpty: false,
@@ -250,7 +250,7 @@ export const ContactComponent = {
           },
           length: {
             minimum: 3,
-            maximum:20,
+            maximum: 20,
             message: "Başlık Kısmınız En Az 3 Karakter En Fazla 20 Karakter Olacak Şekilde Sade Ve Öz Olamalı",
           },
         },
@@ -289,7 +289,6 @@ export const ContactComponent = {
     },
   },
   mounted() {
-    
     Dropzone.autoDiscover = false;
 
     //Dropzonu başlat
@@ -318,6 +317,13 @@ export const ContactComponent = {
     this.dropzone.on("removedfile", (file) => {
       this.dropzoneObject.dropzoneMainObject = { fileID: "", file, fileName: "" };
       this.dropzoneObject.dropzoneBlobObject = null;
+    });
+
+    this.dropzone.on("error", (file, error) => {
+      if (error == "Dosya boyutu fazla - Max : 15 MB") {
+        Swal.fire("Daha Küçük Bir Dosya Dene", error, "warning");
+        this.dropzone.removeFile(file);
+      }
     });
   },
 };
