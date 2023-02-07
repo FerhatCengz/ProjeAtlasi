@@ -33,6 +33,18 @@
             padding: 1px;
             text-align: center;
         }
+
+        @@media screen and (max-width: 767px) {
+            .card .scrollable {
+                max-height: 21rem !important;
+            }
+        }
+
+        @@media screen and (min-width: 767px) {
+            .card .scrollable {
+                max-height: 4rem !important;
+            }
+        }
     </style>
 </head>
 <body>

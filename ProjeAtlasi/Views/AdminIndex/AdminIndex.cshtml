@@ -54,9 +54,17 @@
                 <td>@contactItem.Subject</td>
                 <td>
                     <!--Modal Pencerine veri aktarmak-->
-                    <a type="button" data-toggle="modal" href="#exampleModal" @@click="messageModalShow($event , `@contactItem.Message` , `@contactItem.FullName` , `@contactItem.EmailAddress` , `@contactItem.FileURL` , `@contactItem.PhoneNumber` )" class="text-info">Büyük Pencerede Açmak İçin Tıklayınız</a>
+                    <a type="button" data-toggle="modal" href="#exampleModal" @@click="messageModalShow($event , `@contactItem.Message` , `@contactItem.FullName` , `@contactItem.EmailAddress` , `@contactItem.FileURL` , `@contactItem.PhoneNumber` )" class="text-info d-none d-md-block">Büyük Pencerede Açmak İçin Tıklayınız</a>
 
-                    <textarea disabled class="form-control">@contactItem.Message</textarea>
+                    <div class="card d-md-none">
+                        <div class="card-body">
+                            <div class="scrollable" style="max-height: 200px; overflow-y: scroll;">
+                                @contactItem.Message
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </td>
                 <td>
                     <a href="tel:@contactItem.PhoneNumber">@contactItem.PhoneNumber</a>
